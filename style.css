@@ -1,12 +1,23 @@
 body {
     background: #FFDEBF;
-    display: flex; 
+    /* display: flex; */
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    padding: 0;
+    margin: 0%;
+}
+
+#map {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
 }
 #info-bottom {
     color: #004A78;
+    position: absolute;
+    bottom: 5px;
     align-self: flex-end; 
     padding-bottom: 2rem;
     padding-left: 1rem;
@@ -24,6 +35,7 @@ body {
     font-family: 'Arapey', serif;
     font-size: 18px;
     font-weight: 100;
+  
 }
 
 .mini-info.instrucao {
@@ -31,4 +43,5 @@ body {
     text-align: center;
     color: #004A78;
     font-weight: 300;
+    display: none;
 }
