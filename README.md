@@ -1,7 +1,6 @@
 # PROJETO EM DESENVOLVIMENTO
 Reconstruindo os caminhos do carnaval de rua carioca pré-pandemia com serpentina em um mapa virtual.
-
-### <a href='https://izamith.github.io/caminhos-de-serpentina/index.html'>Acesse o mapa</a>
+<a href='https://izamith.github.io/caminhos-de-serpentina/index.html'>Acesse</a>
 
 ### ℹ [Status  do projeto] 
 ###### Exibir na página o mapa da cidade do Rio de Janeiro ✅
