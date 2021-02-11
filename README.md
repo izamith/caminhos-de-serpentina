@@ -17,5 +17,6 @@ Reconstruindo os caminhos do carnaval de rua carioca pré-pandemia com serpentin
 
 ###### Traçar rota (a pé) das coordenadas dos dados oficiais
 
+###### Comentários e organização de pastas
 
 
