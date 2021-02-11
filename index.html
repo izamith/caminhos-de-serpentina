@@ -4,18 +4,26 @@
         <title>Caminhos de Serpentina</title>
         <link rel="stylesheet" href="style.css">
         <!--P5JS-->
-        <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script> -->
         <!--Fontes-->
         <link rel="preconnect" href="https://fonts.gstatic.com"> 
         <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Arapey&display=swap" rel="stylesheet">
         <!--Mapa-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
 
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
         <!--Meu js-->
-        <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript" src="experiment.js"></script>
 
     </head>
-    <body>
-        <div></div>
+    <body onload="mapping()">
+        <div id='map'> </div>
        
         <span id='info-bottom'> 
             <h1 class='title'>caminhos de serpentina</h1>
