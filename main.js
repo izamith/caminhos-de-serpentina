@@ -6,19 +6,13 @@ piscinadepixel, Isabela Zamith */
 console.log('javascript ok')
 
 //variáveis globais
-//meu token mapbox
-let accessToken = 'pk.eyJ1IjoicGlzY2luYWRlcGl4ZWwiLCJhIjoiY2trenk1ZzE2MGViYTJ1cG5hbXY1c3A5ZCJ9.lso-cNpB8Id_MW1s6_BM7A'
 
-var map
 //armazenamento de dados da tabela
 let blocos = []
 let rotaInicio = []
 let rotaFim = []
 let table
-//onde o mapa começa centralizado
-const centerLong = -43.180046626022985
-const centerLat = -22.912791466947173 
-const zoom = 12
+
 
 let blocoConjunto = []
 var fieldsIn 
@@ -41,7 +35,9 @@ async function getData() {
 
     //debug
         //console.log(table);
+    console.log('csv carregado')
     dataCollection()
+   
 }
 
 function dataCollection(){
@@ -75,10 +71,18 @@ function dataCollection(){
         //primeiro precisa remover os [] (primeiro e ultimos caracteres)
         var j = (rotaInicio[i])
         var resultInicial = j.substring(1, j.length-1);
-
+        
+    
         //DIVIDIR EM DOIS INICIAL
         //divide no espaço e coloca no array fields
         var fieldsIn = resultInicial.split(' ');
+            //console.log(fieldsIn)
+
+        //transformar em número pq era string
+        var fieldsNumIn = []
+        fieldsNumIn.push(parseFloat(fieldsIn[0]))
+        fieldsNumIn.push(parseFloat(fieldsIn[1]))
+            //console.log(fieldsNumIn)
 
         var k = (rotaFim[i])
         var resultFinal 
@@ -89,19 +93,24 @@ function dataCollection(){
                 //divide no espaço e coloca no array fields
                 var fieldsFi = resultFinal.split(' ');
 
+                //transformar em numero pq era string
+                var fieldsNumFi = []
+                fieldsNumFi.push(parseFloat(fieldsFi[0]))
+                fieldsNumFi.push(parseFloat(fieldsFi[1]))
+
+
                 //cada bloco é um objeto com nome e coordenadas iniciais e finais
-                blocoi = new Bloco(blocos[i],fieldsIn,fieldsFi)
+                blocoi = new Bloco(blocos[i],fieldsNumIn,fieldsNumFi)
             }
             else {
                  //cada bloco é um objeto com nome e coordenadas iniciais e finais
-                 blocoi = new Bloco(blocos[i],fieldsIn,fieldsIn)
+                 blocoi = new Bloco(blocos[i],fieldsNumIn,fieldsNumIn)
             }
             blocoConjunto.push(blocoi)
-           
-          
-       
+                // console.log(blocoi)    
         //console.log('O bloco '+ blocos[i]+ ' sai de ' + rotaInicio[i] + ' e vai até ' + rotaFim[i])
     }
+    console.log('blocos criados')
     //console.log(blocoConjunto)
 }
 
@@ -111,81 +120,6 @@ function Bloco(nome, posInicial, posFinal) {
     this.posInicial = posInicial;
     this.posFinal = posFinal;
   }
-
-
-function mapping() {
-    mapboxgl.accessToken = accessToken;
-    map = new mapboxgl.Map({
-    container: 'map', // container ID
-    style: 'mapbox://styles/mapbox/streets-v11', // style URL
-    center: [centerLong, centerLat], // starting position [lng, lat]
-    zoom: zoom // starting zoom
-    });
-
-    /* GETROUTE AQUI */
-     // initialize the map canvas to interact with later
-     var canvas = map.getCanvasContainer();
-   for (var i=0; i<blocoConjunto.length; i++) {
-       //console.log(blocoConjunto[i].posFinal)
-       
-       var start = blocoConjunto[i].posInicial
-       var end = blocoConjunto[i].posFinal
-
-       //console.log(start, end);
-
-        var url = 'https://api.mapbox.com/directions/v5/mapbox/cycling/' + parseInt(start[0]) + ',' + parseInt(start[1]) + ';' + parseInt(end[0]) + ',' + parseInt(end[1]) + '?steps=true&geometries=geojson&access_token=' + accessToken
-            // make an XHR request https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
-        var req = new XMLHttpRequest();
-        req.open('GET', url, true);
-        req.onload = function() {
-            var json = JSON.parse(req.response);
-            var data = json.routes[0];
-            var route = data.geometry.coordinates;
-            var geojson = {
-            type: 'Feature',
-            properties: {},
-            geometry: {
-                type: 'LineString',
-                coordinates: route
-            }
-            };
-            // if the route already exists on the map, reset it using setData
-        if (map.getSource('route')) {
-            map.getSource('route').setData(geojson);
-        } 
-        else { // otherwise, make a new request
-                map.addLayer({
-                id: 'route',
-                type: 'line',
-                source: {
-                    type: 'geojson',
-                    data: {
-                    type: 'Feature',
-                    properties: {},
-                    geometry: {
-                        type: 'LineString',
-                        coordinates: geojson
-                    }
-                    }
-                },
-                layout: {
-                    'line-join': 'round',
-                    'line-cap': 'round'
-                },
-                paint: {
-                    'line-color': '#3887be',
-                    'line-width': 5,
-                    'line-opacity': 0.75
-                }
-                });
-        }
-}
-
-req.send();
-
-    }  
-}
-
 
 
 async function Start() {

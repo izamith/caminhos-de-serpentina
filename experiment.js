@@ -31,7 +31,7 @@ function mapping() {
     
 }
 
-function getRoute(end) {
+function agetRoute(end) {
     // make a directions request using cycling profile
    
     var start = startPoint;
