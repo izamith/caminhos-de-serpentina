@@ -119,3 +119,91 @@ function getRoute(end) {
 
 
 
+
+
+
+
+
+/************
+
+let starts = []
+function getStarts() {
+    for (var i=0; i<blocoConjunto.length; i++) {
+        starts.push(blocoConjunto[i].posInicial);
+        return starts
+    }
+}
+
+
+
+function getRoute(end) {
+    // make a directions request using cycling profile
+   
+    for (var i=0; i<starts.length; i++) {
+
+        var url = 'https://api.mapbox.com/directions/v5/mapbox/cycling/' + starts[i][0] + ',' + starts[i][1] + ';' + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + accessToken;
+        // make an XHR request https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+    var req = new XMLHttpRequest();
+    req.open('GET', url, true);
+    req.onload = function() {
+        var json = JSON.parse(req.response);
+        var data = json.routes[0];
+        var route = data.geometry.coordinates;
+        var geojson = {
+        type: 'Feature',
+        properties: {},
+        geometry: {
+            type: 'LineString',
+            coordinates: route
+        }
+        };
+        // if the route already exists on the map, reset it using setData
+    if (map.getSource('route')) {
+        map.getSource('route').setData(geojson);
+      } else { // otherwise, make a new request
+        map.addLayer({
+          id: 'route',
+          type: 'line',
+          source: {
+            type: 'geojson',
+            data: {
+              type: 'Feature',
+              properties: {},
+              geometry: {
+                type: 'LineString',
+                coordinates: geojson
+              }
+            }
+          },
+          layout: {
+            'line-join': 'round',
+            'line-cap': 'round'
+          },
+          paint: {
+            'line-color': '#3887be',
+            'line-width': 5,
+            'line-opacity': 0.75
+          }
+        });
+    }
+    // add turn instructions here at the end
+  };
+  req.send();
+    }   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***********/
