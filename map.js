@@ -14,13 +14,14 @@ map.setMaxBounds(bounds);
 
 // initialize the map canvas to interact with later
 var canvas = map.getCanvasContainer();
-
+var j = 0
 // an arbitrary start will always be the same
 // only the end or destination will change
 //var start = [-122.662323, 45.523751];
 
 // create a function to make a directions request
 function getRoute(start,end) {
+ 
     // make a directions request using cycling profile
     // an arbitrary start will always be the same
     // only the end or destination will change
@@ -30,6 +31,7 @@ function getRoute(start,end) {
     // make an XHR request https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
     var req = new XMLHttpRequest();
     req.open('GET', url, true);
+  
     req.onload = function() {
       var json = JSON.parse(req.response);
       var data = json.routes[0];
@@ -43,11 +45,11 @@ function getRoute(start,end) {
         }
       };
       // if the route already exists on the map, reset it using setData
-      if (map.getSource('route')) {
-        map.getSource('route').setData(geojson);
-      } else { // otherwise, make a new request
+       // otherwise, make a new request
+       j = j + 1
+       console.log(j)
         map.addLayer({
-          id: 'route',
+          id: 'route'+j,
           type: 'line',
           source: {
             type: 'geojson',
@@ -70,20 +72,27 @@ function getRoute(start,end) {
             'line-opacity': 0.75
           }
         });
-      }
+       
+       
       // add turn instructions here at the end
     };
+ 
     req.send();
+
+    
   }
   
   map.on('load', function() {
+    
     // make an initial directions request that
     // starts and ends at the same location
     for (var i=0; i< blocoConjunto.length; i++) {
+     
       startPoint = blocoConjunto[i].posInicial
       endPoint = blocoConjunto[i].posFinal
+     
       getRoute(startPoint, endPoint);
-
+     
       console.log(startPoint,endPoint)
       // Add starting point to the map
     map.addLayer({
@@ -108,10 +117,15 @@ function getRoute(start,end) {
         'circle-radius': 10,
         'circle-color': '#3887be'
       }
+      
     });
     
-    }
-    getRoute(startPoint,endPoint)  
-    //getRoute([-122.662323, 45.523751], [-122.677738,45.522458]);
     
+    
+    }
+   
+      
+   
+    //getRoute([-122.662323, 45.523751], [-122.677738,45.522458]);
+    getRoute(startPoint,endPoint)
   });
