@@ -17,7 +17,9 @@ var canvas = map.getCanvasContainer();
 var j = 0
 // an arbitrary start will always be the same
 // only the end or destination will change
-//var start = [-122.662323, 45.523751];
+//var start = [-43.180046626022985, -22.912791466947173 ];
+
+
 
 // create a function to make a directions request
 function getRoute(start,end) {
@@ -44,6 +46,7 @@ function getRoute(start,end) {
           coordinates: route
         }
       };
+      
       // if the route already exists on the map, reset it using setData
        // otherwise, make a new request
        j = j + 1
@@ -81,11 +84,9 @@ function getRoute(start,end) {
 
     
   }
+ 
   
   map.on('load', function() {
-    
-    // make an initial directions request that
-    // starts and ends at the same location
     for (var i=0; i< blocoConjunto.length; i++) {
      
       startPoint = blocoConjunto[i].posInicial
@@ -94,6 +95,7 @@ function getRoute(start,end) {
       getRoute(startPoint, endPoint);
      
       console.log(startPoint,endPoint)
+
       // Add starting point to the map
     map.addLayer({
       id: 'point' + i,
@@ -119,13 +121,46 @@ function getRoute(start,end) {
       }
       
     });
-    
-    
+
+    var end = {
+      type: 'FeatureCollection',
+      features: [{
+        type: 'Feature',
+        properties: {},
+        geometry: {
+          type: 'Point',
+          coordinates: endPoint
+        }
+      }
+      ]
+    };
+    map.addLayer({
+      id: 'end'+i,
+      type: 'circle',
+      source: {
+        type: 'geojson',
+        data: {
+          type: 'FeatureCollection',
+          features: [{
+            type: 'Feature',
+            properties: {},
+            geometry: {
+              type: 'Point',
+              coordinates: endPoint
+            }
+          }]
+        }
+      },
+      paint: {
+        'circle-radius': 10,
+        'circle-color': '#f30'
+      }
+    });
     
     }
-   
-      
-   
-    //getRoute([-122.662323, 45.523751], [-122.677738,45.522458]);
     getRoute(startPoint,endPoint)
+    //getRoute([-122.662323, 45.523751], [-122.677738,45.522458]);
+    
   });
+
+ 
