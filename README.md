@@ -13,9 +13,11 @@ Reconstruindo os caminhos do carnaval de rua carioca pré-pandemia com serpentin
 
 ###### Traçar rota (via bicicleta) das coordenadas teste ✅
 
-###### Traçar rota (a pé) das coordenadas teste
+###### Traçar rota (a pé) das coordenadas teste ✅
 
-###### Traçar rota (a pé) das coordenadas dos dados oficiais
+###### Traçar rota (a pé) das coordenadas dos dados oficiais (INDIVIDUAIS) ✅
+
+###### Traçar rota (a pé) das coordenadas dos dados oficiais (TODOS JUNTOS) 
 
 ###### Comentários e organização de pastas
 
