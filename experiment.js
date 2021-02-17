@@ -3,18 +3,21 @@ var map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/streets-v10',
   center: [-43.180046626022985, -22.912791466947173], // starting position
-  zoom: 12
+  zoom: 9.5
 });
+
+var theStart 
 
 // initialize the map canvas to interact with later
 var canvas = map.getCanvasContainer();
 
 
-function createStart() {
+function createStart(i) {
     // an arbitrary start will always be the same
     // only the end or destination will change
-    var start = getStart(3)
-    var coords = getEnd(3)
+    var start = getStart(i)
+    var coords = getEnd(i)
+    theStart = getStart(i);
     console.log(start)
 
     map.on('load', function() {
@@ -24,7 +27,7 @@ function createStart() {
 
     // Add starting point to the map
     map.addLayer({
-      id: 'point',
+      id: 'point'+i,
       type: 'circle',
       source: {
         type: 'geojson',
@@ -94,8 +97,8 @@ function getRoute(end) {
   // make a directions request using cycling profile
   // an arbitrary start will always be the same
   // only the end or destination will change
-  var start = getStart(3);
-  var url = 'https://api.mapbox.com/directions/v5/mapbox/walking/' + start[1] + ',' + start[0] + ';' + end[1] + ',' + end[0] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken;
+  
+  var url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + theStart[1] + ',' + theStart[0] + ';' + end[1] + ',' + end[0] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken;
 
   // make an XHR request https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
   var req = new XMLHttpRequest();
@@ -135,7 +138,7 @@ function getRoute(end) {
           'line-cap': 'round'
         },
         paint: {
-          'line-color': '#3887be',
+          'line-color': '#FF0000',
           'line-width': 5,
           'line-opacity': 0.75
         }
@@ -161,6 +164,7 @@ function getStart(positionBloco) {
     return start  
   }
 
+    //criar posição final do bloco
   function getEnd(positionBloco) {
     var end = blocoConjunto[positionBloco].posFinal
     return end

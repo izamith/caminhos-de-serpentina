@@ -124,6 +124,16 @@ function Bloco(nome, posInicial, posFinal) {
 
 async function Start() {
     await getData();
-    await createStart()
+    await makeMap();
+   
+  //  await createStart(1);
+    //await createStart(2);
     //mapping();
+}
+
+function makeMap() {
+    for(var i=0; i<blocoConjunto.length; i++) {
+            createStart(i);  
+    }
+   
 }
