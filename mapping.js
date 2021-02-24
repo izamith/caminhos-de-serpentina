@@ -8,15 +8,43 @@ var map = new mapboxgl.Map({
 
 // initialize the map canvas to interact with later
 var canvas = map.getCanvasContainer();
-var start = [[-43.180046626022985, -22.912791466947173],[-43.280046626022980, -22.912791466947173]]
+var start = []
+var final = []
+var rotas = []
+
+var urlConjunto = []
+
+
 var theStart 
 var coords
 
-map.on('load', function() { 
-    map.addSource('national-park', {
+requests=new Array(blocoConjunto.length);
+
+map.on('load', async function() { 
+    
+    for (var i =0; i<blocoConjunto.length; i++) {
+        var inicio = []
+        //precisa ser trocado pq eu coletei ao contrário
+        inicio.push(blocoConjunto[i].posInicial[1])
+        inicio.push(blocoConjunto[i].posInicial[0])
+        start.push(inicio)
+
+        var fim = []
+        fim.push(blocoConjunto[i].posFinal[1])
+        fim.push(blocoConjunto[i].posFinal[0])
+        final.push(fim)
+    }
+
+   await getRoute();
+
+    map.addSource('blocos-inicio', {
         'type': 'geojson',
         'data': {
             'type': 'FeatureCollection',
+            //Preciso fazer isso de outro jeito que não seja tão hardcoded,
+            //foor loop não funciona aqui dentro, mas se fizer fora não consigo
+            //acessar de dentro da feature collection
+            //tinha que ser algo do tipo features.push()....
             'features': [
                 {
                     'type': 'Feature',
@@ -35,6 +63,94 @@ map.on('load', function() {
                     } 
                     
                 },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[2]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[3]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[4]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[5]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[6]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[7]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[8]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[9]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[10]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[11]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[12]
+                    } 
+                    
+                }
             ]
         }
     })
@@ -46,25 +162,14 @@ map.on('load', function() {
     map.addLayer({
       id: 'point',
       type: 'circle',
-      source: 'national-park' ,
+      source: 'blocos-inicio' ,
       paint: {
         'circle-radius': 10,
         'circle-color': '#3887be'
       }
     });
 
-    var end = {
-      type: 'FeatureCollection',
-      features: [{
-        type: 'Feature',
-        properties: {},
-        geometry: {
-          type: 'Point',
-          coordinates: coords
-        }
-      }
-      ]
-    };
+   
     if (map.getLayer('end')) {
       map.getSource('end').setData(end);
     } else {
@@ -75,14 +180,112 @@ map.on('load', function() {
           type: 'geojson',
           data: {
             type: 'FeatureCollection',
-            features: [{
-              type: 'Feature',
-              properties: {},
-              geometry: {
-                type: 'Point',
-                coordinates: coords
-              }
-            }]
+            features: [
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[0]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[1]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[2]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[3]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[4]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[5]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[6]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[7]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[8]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[9]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[10]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[11]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[12]
+                    }
+                },
+            ]
           }
         },
         paint: {
@@ -91,80 +294,164 @@ map.on('load', function() {
         }
       });
     }
-    getRoute(coords);
+    getRoute();
   });
 
 
 
-
-function createStart(i) {
-    // an arbitrary start will always be the same
-    // only the end or destination will change
-    var start = getStart(i)
-    coords = getEnd(i)
-    theStart = getStart(i);
-    console.log(start)
-  }
-
 // create a function to make a directions request
-function getRoute(end) {
-  // make a directions request using cycling profile
-  // an arbitrary start will always be the same
-  // only the end or destination will change
-  
-  var url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' + theStart[1] + ',' + theStart[0] + ';' + end[1] + ',' + end[0] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken;
+function getRoute() {
 
-  // make an XHR request https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
-  var req = new XMLHttpRequest();
-  req.open('GET', url, true);
-  req.onload = function() {
-    var json = JSON.parse(req.response);
-    var data = json.routes[0];
-    var route = data.geometry.coordinates;
-    var geojson = {
-      type: 'Feature',
-      properties: {},
-      geometry: {
-        type: 'LineString',
-        coordinates: route
-      }
-    };
-    // if the route already exists on the map, reset it using setData
-    if (map.getSource('route')) {
-      map.getSource('route').setData(geojson);
-    } else { // otherwise, make a new request
-      map.addLayer({
-        id: 'route',
-        type: 'line',
-        source: {
-          type: 'geojson',
-          data: {
-            type: 'Feature',
-            properties: {},
-            geometry: {
-              type: 'LineString',
-              coordinates: geojson
+ 
+}
+  
+
+
+       
+        /*
+
+
+
+  for (var i=0; i<blocoConjunto.length;i++) {
+    var pointA = start[i]
+    var pointB = final[i]
+    var url = 'https://api.mapbox.com/directions/v5/mapbox/walking/' + pointA[0] + ',' + pointA[1] + ';' + pointB[0] + ',' + pointB[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken;
+    // make an XHR request https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+    requests[i] = new XMLHttpRequest();
+    requests[i].open("GET", url, true);
+    console.log(requests[i])
+    req=requests[i]
+    req.onload = function() {
+        var json = JSON.parse(req.response);
+        var data = json.routes[0];
+        var route = data.geometry.coordinates;
+        var geojson = {
+            type: 'FeatureCollection',
+            features: [
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'LineString',
+                        coordinates: route
+                    }
+                },
+    
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'LineString',
+                        coordinates: route
+                    }
+                }
+            ]
+    
+        };
+        // if the route already exists on the map, reset it using setData
+        if (map.getSource('route')) {
+            map.getSource('route').setData(geojson);
+        } else { // otherwise, make a new request
+            map.addLayer({
+            id: 'route',
+            type: 'line',
+            source: {
+                type: 'geojson',
+                data: {
+                type: 'Feature',
+                properties: {},
+                geometry: {
+                    type: 'LineString',
+                    coordinates: geojson
+                }
+                }
+            },
+            layout: {
+                'line-join': 'round',
+                'line-cap': 'round'
+            },
+            paint: {
+                'line-color': '#FF0000',
+                'line-width': 5,
+                'line-opacity': 0.75
             }
-          }
-        },
-        layout: {
-          'line-join': 'round',
-          'line-cap': 'round'
-        },
-        paint: {
-          'line-color': '#FF0000',
-          'line-width': 5,
-          'line-opacity': 0.75
-        }
-      });
-    }
-    // add turn instructions here at the end
-  };
+            });
+        } 
+  }
   req.send();
 }
+        */
+
+/*
+  req.onload = function() {
+        var json = JSON.parse(req.response);
+        var data = json.routes[0];
+        var route = data.geometry.coordinates;
+
+        var geojson = {
+            type: 'FeatureCollection',
+            features: [
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'LineString',
+                        coordinates: route
+                    }
+                },
+
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'LineString',
+                        coordinates: route
+                    }
+                }
+            ]
+ 
+          };
+          // if the route already exists on the map, reset it using setData
+          if (map.getSource('route')) {
+            map.getSource('route').setData(geojson);
+          } else { // otherwise, make a new request
+            map.addLayer({
+              id: 'route',
+              type: 'line',
+              source: {
+                type: 'geojson',
+                data: {
+                  type: 'Feature',
+                  properties: {},
+                  geometry: {
+                    type: 'LineString',
+                    coordinates: geojson
+                  }
+                }
+              },
+              layout: {
+                'line-join': 'round',
+                'line-cap': 'round'
+              },
+              paint: {
+                'line-color': '#FF0000',
+                'line-width': 5,
+                'line-opacity': 0.75
+              }
+            });
+          }
+          // add turn instructions here at the end
+  }
+  
+  
+*/
+ 
 
 
 
+function line() {
+    
+  }
 
 
 
