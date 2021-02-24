@@ -21,6 +21,8 @@ function createStart(i) {
     console.log(start)
 
     map.on('load', function() {
+
+      
     // make an initial directions request that
     // starts and ends at the same location
     getRoute(start);
@@ -66,7 +68,7 @@ function createStart(i) {
       map.getSource('end').setData(end);
     } else {
       map.addLayer({
-        id: 'end',
+        id: 'end'+i,
         type: 'circle',
         source: {
           type: 'geojson',

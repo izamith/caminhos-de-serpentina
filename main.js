@@ -124,7 +124,8 @@ function Bloco(nome, posInicial, posFinal) {
 
 async function Start() {
     await getData();
-    await makeMap();
+ // await makeMap();
+    await createStart(0)
    
   //  await createStart(1);
     //await createStart(2);
