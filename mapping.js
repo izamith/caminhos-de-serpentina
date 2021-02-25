@@ -150,7 +150,351 @@ map.on('load', async function() {
                     'coordinates': start[12]
                     } 
                     
-                }
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[13]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[14]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[15]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[16]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[17]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[18]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[19]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[20]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[21]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[22]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[23]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[24]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[25]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[26]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[27]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[28]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[29]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[30]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[31]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[32]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[33]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[34]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[35]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[36]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[37]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[38]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[39]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[40]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[41]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[42]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[43]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[44]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[45]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[46]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[47]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[48]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[49]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[50]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[51]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[52]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[53]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[54]
+                    } 
+                    
+                },
+                {
+                    'type': 'Feature',
+                    'geometry': {
+                    'type': 'Point',
+                    'coordinates': start[55]
+                    } 
+                    
+                },
             ]
         }
     })
@@ -164,8 +508,8 @@ map.on('load', async function() {
       type: 'circle',
       source: 'blocos-inicio' ,
       paint: {
-        'circle-radius': 10,
-        'circle-color': '#3887be'
+        'circle-radius': 7,
+        'circle-color': '#7A04FF'
       }
     });
 
@@ -285,12 +629,356 @@ map.on('load', async function() {
                         coordinates: final[12]
                     }
                 },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[13]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[14]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[15]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[16]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[17]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[18]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[19]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[20]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[21]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[22]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[23]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[24]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[25]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[26]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[27]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[28]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[29]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[30]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[31]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[32]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[33]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[34]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[35]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[36]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[37]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[38]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[39]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[40]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[41]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[42]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[43]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[44]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[45]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[46]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[47]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[48]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[49]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[50]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[51]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[52]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[53]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[54]
+                    }
+                },
+                {
+                    type: 'Feature',
+                    properties: {},
+                    geometry: {
+                        type: 'Point',
+                        coordinates: final[55]
+                    }
+                },
             ]
           }
         },
         paint: {
-          'circle-radius': 10,
-          'circle-color': '#f30'
+          'circle-radius': 7,
+          'circle-color': '#EC3600'
         }
       });
     }
