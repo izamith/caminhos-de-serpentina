@@ -15,14 +15,35 @@ body {
     height: 100%;
     opacity: 50%;
 }
+
+#info {
+    color:  rgba(0, 0, 0, 0.3);
+    align-self: flex-end; 
+    padding: 10px;
+    padding-bottom: 2rem;
+    margin-left: 1rem;
+    opacity: 90%;  
+}
+
+.info-text {
+    color:  rgba(0, 0, 0);
+    font-size: 17px;   
+}
+
 #info-bottom {
+    background-color:rgba(255,222,191, 0.8);
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    width: 30%;
+    height: 87%;
     color: #004A78;
     position: absolute;
-    bottom: 5px;
+    bottom: 1rem;
+    margin-left: 1rem;
     align-self: flex-end; 
     padding-bottom: 2rem;
     padding-left: 1rem;
-    opacity: 70%;
+    padding-top: 2rem;
 }
 
 .title {

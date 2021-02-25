@@ -112,6 +112,8 @@ function dataCollection(){
     }
     console.log('blocos criados')
     //console.log(blocoConjunto)
+
+    document.getElementById('num-blocos').innerHTML=blocoConjunto.length
 }
 
 //funcao construtora de objetos BLOCO
