@@ -8,6 +8,10 @@ body {
     margin: 0%;
 }
 
+p {
+    color: #004A78;
+}
+
 #map {
     padding: 0;
     margin: 0 auto;
@@ -16,54 +20,75 @@ body {
     opacity: 50%;
 }
 
-#info {
-    color:  rgba(0, 0, 0, 0.3);
-    align-self: flex-end; 
-    padding: 10px;
-    padding-bottom: 2rem;
-    margin-left: 1rem;
-    opacity: 90%;  
-}
-
 .info-text {
     color:  rgba(0, 0, 0);
-    font-size: 17px;   
+    font-size: 17px;  
 }
 
 #info-bottom {
     background-color:rgba(255,222,191, 0.8);
-    border-radius: 8px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
     width: 30%;
-    height: 87%;
+    height: 93%;
     color: #004A78;
     position: absolute;
-    bottom: 1rem;
+    bottom: 2rem;
     margin-left: 1rem;
-    align-self: flex-end; 
-    padding-bottom: 2rem;
-    padding-left: 1rem;
-    padding-top: 2rem;
 }
 
 .title {
     margin: 0;
     font-family: 'Abril Fatface', cursive;
-    font-size: 36px;
+    font-size: 30px;
+    position: relative;
+    z-index: 2;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .mini-info {
     margin: 0;
     font-family: 'Arapey', serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 100;
-  
+    position: relative;
+    z-index: 2;
 }
 
-.mini-info.instrucao {
-    width: 60%;
+.info-title {
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    height: 20%;
+    border-radius: 10px 10px 25px 25px;
+    position: relative;
+    overflow: hidden;
+    box-shadow:  0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info-title img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.15;
+   
+}
+#icoLitoral {
     text-align: center;
-    color: #004A78;
-    font-weight: 300;
-    display: none;
+    padding: 50px;
+   
+}
+
+#icoLitoral img {
+    width: 200px;
+    opacity: .5;
+    margin-bottom: 20px;
+}
+
+.dados {
+   max-width: 80%;
+   margin: 0 auto;
+   line-height: 1;
 }

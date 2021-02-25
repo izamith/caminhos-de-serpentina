@@ -18,7 +18,8 @@
 <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
  <!--Meu js-->
  <script src="main.js"></script>
-
+ <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
  
       
 
@@ -26,20 +27,39 @@
     <body onload="Start()">
         <div id='map'> </div>
           
-        <span id='info-bottom'> 
-            <h1 class='title'>caminhos de serpentina</h1>
-            <h3 class='mini-info legenda'>rio de janeiro, rj</h3>
-            <h3 class='mini-info legenda'>@piscinadepixel, 2021</h3>
-                <div class="info-text">
-                    <p><span id="num-blocos"></span> blocos acima de 10000 pessoas</p>
+        <div class="container">
+            <div class="col-3" id='info-bottom'> 
+
+            
+                    <div class="col-12 info-title">
+                        <img src="img/bg-serpentina.webp"/>
+                        <h1 class='title'>caminhos de serpentina</h1>
+                        <h3 class='mini-info legenda'>rio de janeiro, rj</h3>
+                        <h3 class='mini-info legenda'>@piscinadepixel, 2021</h3>  
+                    </div>
+        
+                
+
+                <div class="row info-text">
+                    <span class="col-12" id="icoLitoral"> 
+                        <!--  <p class="mini-info legenda dados">Litoral</p> -->
+                        <img src="img/icoLitoral.svg"/>
+                        <p class="mini-info legenda dados"><span id="porcentLitoral"></span>% dos blocos de rua com público acima de 10000 pessoas aconteceram no litoral.</p>
+                    </span> 
                 </div>
-        </span>
-       
-        <div>
-            <h3 class='mini-info instrucao'>Espalhe a serpentina para relembrar os caminhos
-                do carnaval de rua carioca pré-pandemia.</h3>
-            <canvas id='serpentina'></canvas>
+
+                <div class="row info-text">
+                    <span class="col-12" id="icoLitoral"> 
+                        <!-- <p class="mini-info legenda dados">Litoral</p> -->
+                        <a href="#" class="mini-info legenda">fonte: carnaval rio 2020 (riotur)</a>
+                    </span> 
+                </div>
+                
+            </div>
         </div>
+
+        <script src="dataViz-Elements.js"></script>
         <script src="mapping.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     </body>
 </html>
