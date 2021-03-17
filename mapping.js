@@ -508,8 +508,8 @@ map.on('load', async function() {
       type: 'circle',
       source: 'blocos-inicio' ,
       paint: {
-        'circle-radius': 7,
-        'circle-color': '#7A04FF'
+        'circle-radius': 4,
+        'circle-color': '#EA420D',
       }
     });
 
@@ -977,7 +977,7 @@ map.on('load', async function() {
           }
         },
         paint: {
-          'circle-radius': 7,
+          'circle-radius': 4,
           'circle-color': '#EC3600'
         }
       });
