@@ -112,11 +112,9 @@ function dataCollection(){
     }
     console.log('blocos criados')
     //console.log(blocoConjunto)
-<<<<<<< HEAD
 
  //   document.getElementById('num-blocos').innerHTML=blocoConjunto.length
-=======
->>>>>>> parent of 20b16c2... Parte 1 box de informações
+
 }
 
 //funcao construtora de objetos BLOCO
