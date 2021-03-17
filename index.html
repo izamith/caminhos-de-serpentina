@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Caminhos de Serpentina</title>
-        <link rel="stylesheet" href="style.css">
+       
         <!--Fontes-->
         <link rel="preconnect" href="https://fonts.gstatic.com"> 
         <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Arapey&display=swap" rel="stylesheet">
@@ -13,23 +13,26 @@
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
-
         <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
- <!--Meu js-->
- <script src="main.js"></script>
- <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
- 
-      
-
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+        <!--JS-->
+        <script src="main.js"></script>
+        <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+        <!--CSS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body onload="Start()">
-        <div id='map'> </div>
-          
-        <div class="container">
-            <div class="col-3" id='info-bottom'> 
 
+    <body onload="Start()">
+        <div class="cont">
+        <div class='col-4 info-box'>
+            <div id="title">
+                Caminhos </br>de serpentina
+            </div>
+        </div>
+            <div id='map'></div>
+        </div>
+                <!--
             
                     <div class="col-12 info-title">
                         <img src="img/bg-serpentina.webp"/>
@@ -42,7 +45,7 @@
 
                 <div class="row info-text">
                     <span class="col-12" id="icoLitoral"> 
-                        <!--  <p class="mini-info legenda dados">Litoral</p> -->
+                        <p class="mini-info legenda dados">Litoral</p> 
                         <img src="img/icoLitoral.svg"/>
                         <p class="mini-info legenda dados"><span id="porcentLitoral"></span>% dos blocos de rua com público acima de 10000 pessoas aconteceram no litoral.</p>
                     </span> 
@@ -50,13 +53,14 @@
 
                 <div class="row info-text">
                     <span class="col-12" id="icoLitoral"> 
-                        <!-- <p class="mini-info legenda dados">Litoral</p> -->
+                        <p class="mini-info legenda dados">Litoral</p> 
                         <a href="#" class="mini-info legenda">fonte: carnaval rio 2020 (riotur)</a>
                     </span> 
                 </div>
                 
             </div>
-        </div>
+            -->
+        
 
         <script src="dataViz-Elements.js"></script>
         <script src="mapping.js"></script>
