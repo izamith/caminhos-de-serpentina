@@ -112,9 +112,15 @@ function dataCollection(){
     }
     console.log('blocos criados')
     //console.log(blocoConjunto)
+<<<<<<< HEAD
+<<<<<<< HEAD
 
  //   document.getElementById('num-blocos').innerHTML=blocoConjunto.length
 
+=======
+>>>>>>> parent of 20b16c2... Parte 1 box de informações
+=======
+>>>>>>> parent of 20b16c2... Parte 1 box de informações
 }
 
 //funcao construtora de objetos BLOCO
@@ -127,10 +133,10 @@ function Bloco(nome, posInicial, posFinal) {
 
 async function Start() {
     await getData();
-    //await makeMap();
-    //await createStart(0)
+ // await makeMap();
+ //   await createStart(0)
    
-    //await createStart(1);
+  //  await createStart(1);
     //await createStart(2);
     //mapping();
 }
