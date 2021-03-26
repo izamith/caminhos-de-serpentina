@@ -513,6 +513,7 @@ map.on('load', async function() {
       }
     });
 
+    
    
     if (map.getLayer('end')) {
       map.getSource('end').setData(end);
