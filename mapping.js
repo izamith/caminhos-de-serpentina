@@ -1054,6 +1054,7 @@ function getRoute() {
                 }
                 }
             },
+            
             layout: {
                 'line-join': 'round',
                 'line-cap': 'round'

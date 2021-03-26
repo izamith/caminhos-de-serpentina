@@ -28,7 +28,6 @@ p {
 .info-text {
     color:  rgba(0, 0, 0);
     font-size: 17px;  
->>>>>>> parent of b4fb80b... Voltar à versão antiga
 }
 
 #info-bottom {
@@ -39,7 +38,6 @@ p {
     height: 93%;
     color: #004A78;
     position: absolute;
-<<<<<<< HEAD
     z-index: 2;
     left: 20px;
     top: 20px;
@@ -48,8 +46,6 @@ p {
     background-color: rgb(255, 222, 191, 0.8);
     color: rgb(0,74,120);
     border-radius: 3px;
-  
-=======
     opacity: 50%;
 }
 >>>>>>> parent of 20b16c2... Parte 1 box de informações
