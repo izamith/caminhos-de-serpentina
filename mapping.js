@@ -13,7 +13,7 @@ var final = []
 var rotas = []
 
 var urlConjunto = []
-
+ 
 
 var theStart 
 var coords
@@ -1055,7 +1055,7 @@ function getRoute() {
                 }
                 }
             },
-            
+
             layout: {
                 'line-join': 'round',
                 'line-cap': 'round'
